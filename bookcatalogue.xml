@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookcatalogue.xsl"?>
+<BookCatalogue>
+    <Book BookID="B001">
+        <Title>The Art Of Clear Thinking</Title>
+        <Author>Hasard Lee</Author>
+        <Price>74.20</Price>
+        <CopiesSold>300</CopiesSold>
+        <ImageURL>images/B001.jpg</ImageURL>
+    </Book>
+    <Book BookID="B002">
+        <Title>Station Eleven</Title>
+        <Author>Emily St. John Mandel</Author>
+        <Price>41.20</Price>
+        <CopiesSold>250</CopiesSold>
+        <ImageURL>images/B002.jpg</ImageURL>
+    </Book>
+    <Book BookID="B003">
+        <Title>Art Of Reading Minds</Title>
+        <Author>Henrik Fexeus</Author>
+        <Price>54.50</Price>
+        <CopiesSold>290</CopiesSold>
+        <ImageURL>images/B003.jpg</ImageURL>
+    </Book>
+    <Book BookID="B004">
+        <Title>The Art of Letting God</Title>
+        <Author>Mizi Wahid</Author>
+        <Price>22.50</Price>
+        <CopiesSold>200</CopiesSold>
+        <ImageURL>images/B004.jpg</ImageURL>
+    </Book>
+    <Book BookID="B005">
+        <Title>The Laws of Human Nature</Title>
+        <Author>Robert Greene</Author>
+        <Price>52.40</Price>
+        <CopiesSold>230</CopiesSold>
+        <ImageURL>images/B005.jpg</ImageURL>
+    </Book>
+    <Book BookID="B006">
+        <Title>The School of Life</Title>
+        <Author>Alain De Botton</Author>
+        <Price>47.90</Price>
+        <CopiesSold>100</CopiesSold>
+        <ImageURL>images/B006.jpg</ImageURL>
+    </Book>
+    <Book BookID="B007">
+        <Title>Dari Lembah Cita-cita</Title>
+        <Author>Hamka</Author>
+        <Price>18.70</Price>
+        <CopiesSold>350</CopiesSold>
+        <ImageURL>images/B007.jpg</ImageURL>
+    </Book>
+    <Book BookID="B008">
+        <Title>The Art of Marketing</Title>
+        <Author>Syed Gaddafi</Author>
+        <Price>22.50</Price>
+        <CopiesSold>150</CopiesSold>
+        <ImageURL>images/B008.jpg</ImageURL>
+    </Book>
+    <Book BookID="B009">
+        <Title>Marco Polo - Penjelajahan Ke Asia</Title>
+        <Author>Al Ghazali</Author>
+        <Price>18.00</Price>
+        <CopiesSold>190</CopiesSold>
+        <ImageURL>images/B009.jpg</ImageURL>
+    </Book>
+    <Book BookID="B010">
+        <Title>Signature Jalanan</Title>
+        <Author>Teme Abdullah</Author>
+        <Price>24.70</Price>
+        <CopiesSold>400</CopiesSold>
+        <ImageURL>images/B010.jpg</ImageURL>
+    </Book>
+    <Book BookID="B011">
+        <Title>Hamka:Lembaga Budi - Edisi 2023</Title>
+        <Author>Hamka</Author>
+        <Price>17.20</Price>
+        <CopiesSold>170</CopiesSold>
+        <ImageURL>images/B011.jpg</ImageURL>
+    </Book>
+    <Book BookID="B012">
+        <Title>Odyssey</Title>
+        <Author>Stephen Fry</Author>
+        <Price>88.10</Price>
+        <CopiesSold>120</CopiesSold>
+        <ImageURL>images/B012.jpg</ImageURL>
+    </Book>
+    <Book BookID="B013">
+        <Title>Ego is the Enemy</Title>
+        <Author>Ryan Holiday</Author>
+        <Price>48.70</Price>
+        <CopiesSold>140</CopiesSold>
+        <ImageURL>images/B013.jpg</ImageURL>
+    </Book>
+    <Book BookID="B014">
+        <Title>The Greatest Secret</Title>
+        <Author>Rhonda Byrne</Author>
+        <Price>79.40</Price>
+        <CopiesSold>260</CopiesSold>
+        <ImageURL>images/B014.jpg</ImageURL>
+    </Book>
+    <Book BookID="B015">
+        <Title>Powerful</Title>
+        <Author>Lauren Roberts</Author>
+        <Price>51.40</Price>
+        <CopiesSold>310</CopiesSold>
+        <ImageURL>images/B015.jpg</ImageURL>
+    </Book>
+</BookCatalogue>
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>ReadNBuy</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <!-- Header Section -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>ReadNBuy</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="bookcatalogue.html">Book Catalogue</a></li>
+            <li class="nav-item"><a class="nav-link" href="enquiries.html">Enquiries</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="container mt-5">
+      <div id="output"></div>
+    </div>
+  </main>
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <h2>
+          ReadNBuy
+        </h2>
+      </div>
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              About Shop
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p> 56,Jalan Marung, 29000 Selangor
+                
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/telephone-white.png" width="12px" alt="">
+              </div>
+              <p>
+                +01 1234567890
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                ReadNBuy@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Informations
+            </h5>
+            <p>
+              ReadNbuy Shop offers a wide range of books and educational materials at affordable prices. From fiction to academic resources, we make reading simple, convenient, and enjoyable for everyone!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="">
+                <img src="images/linkedin.png" alt="">
+              </a>
+              <a href="">
+                <img src="images/youtube.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">ReadNBuy</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script>
+    async function loadAndTransform(xmlUrl, xslUrl) {
+      try {
+        const [xmlResponse, xslResponse] = await Promise.all([fetch(xmlUrl), fetch(xslUrl)]);
+        if (!xmlResponse.ok || !xslResponse.ok) {
+          throw new Error(`Failed to fetch: ${!xmlResponse.ok ? xmlUrl : xslUrl}`);
+        }
+
+        const xmlText = await xmlResponse.text();
+        const xslText = await xslResponse.text();
+
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+        const xslDoc = parser.parseFromString(xslText, "application/xml");
+
+        const xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xslDoc);
+
+        const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+        document.getElementById("output").appendChild(resultDocument);
+      } catch (error) {
+        console.error("Error:", error);
+        document.getElementById("output").innerText = `Error: ${error.message}`;
+      }
+    }
+
+    // Load XML and XSL
+    loadAndTransform('bookcatalogue.xml', 'bookcatalogue.xsl');
+  </script>
+</body>
+
+</html>
