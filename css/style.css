@@ -263,7 +263,7 @@ a:focus {
 
 .slider_section #customCarousel1 {
   width: 100%;
-  position: unset;
+  position: fixed;
 }
 
 .slider_section .detail-box {
